@@ -15,7 +15,7 @@ class DataWorker {
     var dataArray: [ItemModel]?
     
     func fetchProductList() {
-        guard let url = Bundle.main.url(forResource: "products", withExtension: "json"), let data = try? Data(contentsOf: url) else {
+        guard let url = Bundle.main.url(forResource: AppConstant.jsonFileName, withExtension: "json"), let data = try? Data(contentsOf: url) else {
             return
         }
         do {

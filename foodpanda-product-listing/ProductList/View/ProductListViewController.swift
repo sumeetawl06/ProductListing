@@ -10,6 +10,10 @@ import UIKit
 
 class ProductListViewController: UIViewController {
     
+    struct Constants {
+        static let cellIdentifier = "itemCell"
+    }
+    
     var presentor:ViewToPresenterProtocol?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -52,12 +56,12 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! ItemCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as! ItemCollectionViewCell
         cell.resetData()
         let item = dataArray[indexPath.item]
         cell.data = item
+        
         cell.plusButtonClick = { cell in
-            
             self.performAddRemove(operation: .Add, itemId: item.id ?? 0, itemX: indexPath.item)
             cell.data = self.dataArray[indexPath.item]
             collectionView.reloadItems(at: [indexPath])

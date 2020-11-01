@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E09C458254F4030001273BA /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E09C457254F4030001273BA /* AppConstant.swift */; };
 		3E6DA235254DB77C00D8D380 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA234254DB77C00D8D380 /* ItemCollectionViewCell.swift */; };
 		3E6DA237254DD06500D8D380 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA236254DD06500D8D380 /* ItemModel.swift */; };
 		3E6DA238254DD12A00D8D380 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 99C116C12547DDDF00E14369 /* products.json */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E09C457254F4030001273BA /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		3E6DA234254DB77C00D8D380 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E6DA236254DD06500D8D380 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		3E6E1C9F254EB87C0001E667 /* ProductListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListProtocol.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				99C116992547C6EC00E14369 /* Assets.xcassets */,
 				99C1169B2547C6EC00E14369 /* LaunchScreen.storyboard */,
 				3ECBB7EF254E9FE5002A9A12 /* Product.storyboard */,
+				3E09C457254F4030001273BA /* AppConstant.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				3E6E1CA0254EB87C0001E667 /* ProductListProtocol.swift in Sources */,
 				99C116952547C6EA00E14369 /* ProductListViewController.swift in Sources */,
 				3E6DA237254DD06500D8D380 /* ItemModel.swift in Sources */,
+				3E09C458254F4030001273BA /* AppConstant.swift in Sources */,
 				3E6E1CA2254EB92C0001E667 /* ProductListPresenter.swift in Sources */,
 				99C116912547C6EA00E14369 /* AppDelegate.swift in Sources */,
 			);
