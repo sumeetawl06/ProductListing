@@ -14,11 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+            
         window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Product", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(identifier: "ViewController")
-        window?.rootViewController = viewController
+        let productList = ProductListRouter.createModule()
+        window?.rootViewController = productList
         window?.makeKeyAndVisible()
         
         // Override point for customization after application launch.

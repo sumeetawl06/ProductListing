@@ -11,24 +11,65 @@ import XCTest
 
 class foodpanda_product_listingTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var dataWorker = DataWorker()
+    
+    override func setUp() {
+        super.setUp()
+        dataWorker.fetchProductList()
+    }
+    
+    func testMaxPerOrderCondition() {
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 1)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 1)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 1)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 1)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 1)
+        let result = dataWorker.updateProductItemModel(operation: .Add, itemId: 1)
+        XCTAssertTrue(result?.0?.quantity_added == 2, "Quantity added exceeds the Max Per Order.")
+    }
+    
+    func testStockCondition() {
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        let result = dataWorker.updateProductItemModel(operation: .Add, itemId: 7)
+        XCTAssertTrue(result?.0?.quantity_added == 6, "Quantity added exceeds the Stock amount.")
+    }
+    
+    func testUnlimitedCondition() {
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        _ = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        let result = dataWorker.updateProductItemModel(operation: .Add, itemId: 6)
+        XCTAssertTrue(result?.0?.quantity_added == 11, "When stock_amount and max_per_order is -1 then any number of items can be added.")
+    }
+        
+    func testStockAmountZero() {
+        dataWorker.interactor = self
+        dataWorker.fetchProductList()
+        
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+}
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+extension foodpanda_product_listingTests: DataWorkerToInteractor {
+    func productListFetched(productList: [ItemModel]) {
+        XCTAssertNil(productList.first ( where: { $0.stockAmount == 0 }), "Products for stock amount zero is shown")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func productListFetchFailed() {
+        
     }
-
+    
+    
 }

@@ -11,9 +11,14 @@
 		3E6DA237254DD06500D8D380 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA236254DD06500D8D380 /* ItemModel.swift */; };
 		3E6DA238254DD12A00D8D380 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 99C116C12547DDDF00E14369 /* products.json */; };
 		3E6E1C97254EB22B0001E667 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3E6E1C96254EB22B0001E667 /* SDWebImage */; };
+		3E6E1CA0254EB87C0001E667 /* ProductListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E1C9F254EB87C0001E667 /* ProductListProtocol.swift */; };
+		3E6E1CA2254EB92C0001E667 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E1CA1254EB92C0001E667 /* ProductListPresenter.swift */; };
+		3E6E1CA4254EBA640001E667 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E1CA3254EBA640001E667 /* ProductListInteractor.swift */; };
+		3E6E1CA6254EBB3D0001E667 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E1CA5254EBB3D0001E667 /* ProductListRouter.swift */; };
 		3ECBB7F0254E9FE5002A9A12 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECBB7EF254E9FE5002A9A12 /* Product.storyboard */; };
+		3EFAD019254EE5130041A2CB /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFAD018254EE5130041A2CB /* DataWorker.swift */; };
 		99C116912547C6EA00E14369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C116902547C6EA00E14369 /* AppDelegate.swift */; };
-		99C116952547C6EA00E14369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C116942547C6EA00E14369 /* ViewController.swift */; };
+		99C116952547C6EA00E14369 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C116942547C6EA00E14369 /* ProductListViewController.swift */; };
 		99C1169A2547C6EC00E14369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C116992547C6EC00E14369 /* Assets.xcassets */; };
 		99C1169D2547C6EC00E14369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C1169B2547C6EC00E14369 /* LaunchScreen.storyboard */; };
 		99C116A82547C6EC00E14369 /* foodpanda_product_listingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C116A72547C6EC00E14369 /* foodpanda_product_listingTests.swift */; };
@@ -40,10 +45,15 @@
 /* Begin PBXFileReference section */
 		3E6DA234254DB77C00D8D380 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E6DA236254DD06500D8D380 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		3E6E1C9F254EB87C0001E667 /* ProductListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListProtocol.swift; sourceTree = "<group>"; };
+		3E6E1CA1254EB92C0001E667 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		3E6E1CA3254EBA640001E667 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
+		3E6E1CA5254EBB3D0001E667 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
 		3ECBB7EF254E9FE5002A9A12 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		3EFAD018254EE5130041A2CB /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
 		99C1168D2547C6EA00E14369 /* foodpanda-product-listing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foodpanda-product-listing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C116902547C6EA00E14369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99C116942547C6EA00E14369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99C116942547C6EA00E14369 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		99C116992547C6EC00E14369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99C1169C2547C6EC00E14369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99C1169E2547C6EC00E14369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +94,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E6E1C98254EB6600001E667 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				3EFAD017254EE5000041A2CB /* Worker */,
+				3E6E1C9E254EB6980001E667 /* View */,
+				3E6E1C9D254EB68F0001E667 /* Presenter */,
+				3E6E1C9C254EB6880001E667 /* Router */,
+				3E6E1C9B254EB6800001E667 /* Interactor */,
+				3E6E1C9A254EB6770001E667 /* Entity */,
+				3E6E1C99254EB66E0001E667 /* Protocol */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		3E6E1C99254EB66E0001E667 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3E6E1C9F254EB87C0001E667 /* ProductListProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3E6E1C9A254EB6770001E667 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3E6DA236254DD06500D8D380 /* ItemModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3E6E1C9B254EB6800001E667 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3E6E1CA3254EBA640001E667 /* ProductListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3E6E1C9C254EB6880001E667 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3E6E1CA5254EBB3D0001E667 /* ProductListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3E6E1C9D254EB68F0001E667 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3E6E1CA1254EB92C0001E667 /* ProductListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3E6E1C9E254EB6980001E667 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E6DA234254DB77C00D8D380 /* ItemCollectionViewCell.swift */,
+				99C116942547C6EA00E14369 /* ProductListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E6E1CA7254ECFD60001E667 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				99C116902547C6EA00E14369 /* AppDelegate.swift */,
+				99C116992547C6EC00E14369 /* Assets.xcassets */,
+				99C1169B2547C6EC00E14369 /* LaunchScreen.storyboard */,
+				3ECBB7EF254E9FE5002A9A12 /* Product.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3EFAD017254EE5000041A2CB /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				3EFAD018254EE5130041A2CB /* DataWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		99C116842547C6EA00E14369 = {
 			isa = PBXGroup;
 			children = (
@@ -110,14 +202,9 @@
 		99C1168F2547C6EA00E14369 /* foodpanda-product-listing */ = {
 			isa = PBXGroup;
 			children = (
-				99C116902547C6EA00E14369 /* AppDelegate.swift */,
-				99C116942547C6EA00E14369 /* ViewController.swift */,
-				99C116992547C6EC00E14369 /* Assets.xcassets */,
-				99C1169B2547C6EC00E14369 /* LaunchScreen.storyboard */,
 				99C1169E2547C6EC00E14369 /* Info.plist */,
-				3E6DA234254DB77C00D8D380 /* ItemCollectionViewCell.swift */,
-				3E6DA236254DD06500D8D380 /* ItemModel.swift */,
-				3ECBB7EF254E9FE5002A9A12 /* Product.storyboard */,
+				3E6E1CA7254ECFD60001E667 /* Common */,
+				3E6E1C98254EB6600001E667 /* ProductList */,
 			);
 			path = "foodpanda-product-listing";
 			sourceTree = "<group>";
@@ -278,9 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6E1CA6254EBB3D0001E667 /* ProductListRouter.swift in Sources */,
 				3E6DA235254DB77C00D8D380 /* ItemCollectionViewCell.swift in Sources */,
-				99C116952547C6EA00E14369 /* ViewController.swift in Sources */,
+				3EFAD019254EE5130041A2CB /* DataWorker.swift in Sources */,
+				3E6E1CA4254EBA640001E667 /* ProductListInteractor.swift in Sources */,
+				3E6E1CA0254EB87C0001E667 /* ProductListProtocol.swift in Sources */,
+				99C116952547C6EA00E14369 /* ProductListViewController.swift in Sources */,
 				3E6DA237254DD06500D8D380 /* ItemModel.swift in Sources */,
+				3E6E1CA2254EB92C0001E667 /* ProductListPresenter.swift in Sources */,
 				99C116912547C6EA00E14369 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -432,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -449,7 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PAG7E633X4;
 				INFOPLIST_FILE = "foodpanda-product-listing/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PAG7E633X4;
 				INFOPLIST_FILE = "foodpanda-product-listing/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,7 +581,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "foodpanda-product-listingTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,7 +602,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "foodpanda-product-listingTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

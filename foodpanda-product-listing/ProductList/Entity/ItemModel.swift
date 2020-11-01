@@ -16,6 +16,7 @@ struct ItemModel: Codable {
     var image_url: String?
     var stockAmount: Int?
     var max_per_order: Int?
+    var quantity_added: Int? = 0
     
     enum codingKeys: String, CodingKey {
         case id = "id"
@@ -24,6 +25,7 @@ struct ItemModel: Codable {
         case image_url = "image_url"
         case stockAmount = "stockAmount"
         case max_per_order = "max_per_order"
+        case quantity_added = "quantity_added"
     }
     
     init(from decoder: Decoder) throws {
@@ -34,5 +36,6 @@ struct ItemModel: Codable {
         image_url = try values.decodeIfPresent(String.self, forKey: .image_url)
         stockAmount = try values.decodeIfPresent(Int.self, forKey: .stockAmount)
         max_per_order = try values.decodeIfPresent(Int.self, forKey: .max_per_order)
+        quantity_added = try values.decodeIfPresent(Int.self, forKey: .quantity_added) ?? 0
     }
 }

@@ -39,7 +39,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         productImageView.sd_setImage(with: URL(string: data?.image_url ?? ""), placeholderImage: UIImage(named: ""))
         productPriceLabel.text = "\(data?.price ?? 0)"
         productNameLabel.text = data?.name ?? ""
-        itemCountTextField.text = "\(addedCount)"
+        itemCountTextField.text = "\(String(describing: data?.quantity_added ?? 0))"
     }
     
     override init(frame: CGRect) {

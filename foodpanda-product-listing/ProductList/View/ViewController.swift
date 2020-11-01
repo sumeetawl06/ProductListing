@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProductListViewController: UIViewController {
+    
+    var presentor:ViewToPresenterProtocol?
     
     @IBOutlet weak var collectionView: UICollectionView!
     var dataArray = [ItemModel]()
@@ -21,26 +23,8 @@ class ViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        createDaraArrayFromJson()
-    }
-    
-    //MARK: Load Data From Json File
-    
-    func createDaraArrayFromJson() {
-        
-        guard let url = Bundle.main.url(forResource: "products", withExtension: "json"), let data = try? Data(contentsOf: url) else {
-            return
-        }
-        do {
-            let products = try JSONDecoder().decode([ItemModel].self, from: data)
-            dataArray = products.filter({ (item) -> Bool in
-                return (item.stockAmount != 0)
-            })
-            collectionView.reloadData()
-        }
-        catch {
-            print(error.localizedDescription)
-        }
+        presentor?.fetchProductsList()
+
     }
     
     //MARK: Event Handling
@@ -71,7 +55,20 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+extension ProductListViewController:PresenterToViewProtocol {
+    func showProducts(productsList: [ItemModel]) {
+        dataArray = productsList
+        collectionView.reloadData()
+    }
+    
+    func showError() {
+        let alert = UIAlertController(title: "Alert", message: "Problem Reading JSON file", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension ProductListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         

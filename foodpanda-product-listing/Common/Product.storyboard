@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Product List View Controller-->
         <scene sceneID="QHQ-6e-Y36">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="zUg-3f-PqC" customClass="ViewController" customModule="foodpanda_product_listing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="zUg-3f-PqC" customClass="ProductListViewController" customModule="foodpanda_product_listing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbv-w3-Y7m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-pR-MkZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dqu-tS-BJ7">
                                     <size key="itemSize" width="200" height="347"/>
@@ -141,10 +140,10 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08T-b5-OdC">
-                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price: $0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYZ-IM-Kxi">
-                                        <rect key="frame" x="62" y="40" width="290" height="40"/>
+                                        <rect key="frame" x="90" y="0.0" width="420" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -159,10 +158,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="JYZ-IM-Kxi" firstAttribute="centerX" secondItem="08T-b5-OdC" secondAttribute="centerX" id="BVi-er-61u"/>
-                                    <constraint firstAttribute="height" constant="80" id="ONY-4n-7a9"/>
+                                    <constraint firstAttribute="height" constant="40" id="ONY-4n-7a9"/>
                                     <constraint firstItem="JYZ-IM-Kxi" firstAttribute="width" secondItem="08T-b5-OdC" secondAttribute="width" multiplier="0.7" id="XQF-28-lfC"/>
                                     <constraint firstAttribute="bottom" secondItem="JYZ-IM-Kxi" secondAttribute="bottom" id="ZHb-Jp-WTD"/>
-                                    <constraint firstItem="JYZ-IM-Kxi" firstAttribute="height" secondItem="08T-b5-OdC" secondAttribute="height" multiplier="0.5" id="jdv-TB-fiw"/>
+                                    <constraint firstItem="JYZ-IM-Kxi" firstAttribute="height" secondItem="08T-b5-OdC" secondAttribute="height" id="jdv-TB-fiw"/>
                                 </constraints>
                             </view>
                         </subviews>
